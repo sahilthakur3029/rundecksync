@@ -1,0 +1,31 @@
+<joblist>
+  <job>
+    <defaultTab>nodes</defaultTab>
+    <description>Reports the disk space locally </description>
+    <dispatch>
+      <excludePrecedence>true</excludePrecedence>
+      <keepgoing>false</keepgoing>
+      <rankOrder>ascending</rankOrder>
+      <successOnEmptyNodeFilter>false</successOnEmptyNodeFilter>
+      <threadcount>1</threadcount>
+    </dispatch>
+    <executionEnabled>true</executionEnabled>
+    <id>c175e598-1c53-459c-8c54-64c2d8b6a6bd</id>
+    <loglevel>INFO</loglevel>
+    <name>Report Disk Space</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <nodefilters>
+      <filter>.*</filter>
+    </nodefilters>
+    <nodesSelectedByDefault>true</nodesSelectedByDefault>
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>Reporting on disk space</description>
+        <exec>df -lh</exec>
+      </command>
+    </sequence>
+    <uuid>c175e598-1c53-459c-8c54-64c2d8b6a6bd</uuid>
+  </job>
+</joblist>

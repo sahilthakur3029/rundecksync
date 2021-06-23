@@ -1,0 +1,43 @@
+<joblist>
+  <job>
+    <defaultTab>nodes</defaultTab>
+    <description>Clears the Yum Cache locally</description>
+    <dispatch>
+      <excludePrecedence>true</excludePrecedence>
+      <keepgoing>false</keepgoing>
+      <rankOrder>ascending</rankOrder>
+      <successOnEmptyNodeFilter>false</successOnEmptyNodeFilter>
+      <threadcount>1</threadcount>
+    </dispatch>
+    <executionEnabled>true</executionEnabled>
+    <id>7c6a26d5-2992-4295-9a00-cbe540dbd0c3</id>
+    <loglevel>INFO</loglevel>
+    <name>Clear Yum Cache</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <nodefilters>
+      <filter>.*</filter>
+    </nodefilters>
+    <nodesSelectedByDefault>true</nodesSelectedByDefault>
+    <notification>
+      <onstart>
+        <plugin type='SlackNotification'>
+          <configuration>
+            <entry key='slack_channel' value='#rundeck-test' />
+            <entry key='webhook_base_url' value='https://hooks.slack.com/services/' />
+            <entry key='webhook_token' value='T02FUV17N/B0258C94NQG/lXwj7Iog8kmp8xiLogFnv35K' />
+          </configuration>
+        </plugin>
+      </onstart>
+    </notification>
+    <notifyAvgDurationThreshold />
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>Clearing Yum Cache </description>
+        <exec>yum clean all</exec>
+      </command>
+    </sequence>
+    <uuid>7c6a26d5-2992-4295-9a00-cbe540dbd0c3</uuid>
+  </job>
+</joblist>
