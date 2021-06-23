@@ -12,7 +12,7 @@
     <executionEnabled>true</executionEnabled>
     <id>7c6a26d5-2992-4295-9a00-cbe540dbd0c3</id>
     <loglevel>INFO</loglevel>
-    <name>Clear Yum Cache [UPDATED 4]</name>
+    <name>Clear Yum Cache [UPDATED 3]</name>
     <nodeFilterEditable>false</nodeFilterEditable>
     <nodefilters>
       <filter>.*</filter>
